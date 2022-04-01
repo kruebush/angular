@@ -1,0 +1,62 @@
+
+<h2>Find a Docotor</h2>
+<!-- <form novalidate[formGroup]="finddoctor" (ngSubmit)="displaySelectedInfor()">-->
+  <!--<fieldset > 
+    <div class="container mt-5">
+        <select [formControlName]="finddoctor" (ngModelChange)="onSelectChange($event)" size="5" class="form-control" multiple>
+            <option [ngValue]="null" value="-1" disabled class="first-option-item">{{ doctor.specialty }}</option>
+            <option *ngFor="let doctor of this.doctor[i].items" [ngValue]="doctorValue.specialty">
+                {{doctorValue.specialty}
+            </option>
+        </select> -->
+
+
+
+    <br/>
+       <div class="container">
+    <form [formGroup]="finddoctor" (ngSubmit)="searchDoctor()">
+           
+        <div class="form-group">
+            <label for="specialty">Specialty:</label>
+            <select formControlName="specialty" class="form-control" >
+                <option value="Dentist">Dentist
+                    <option value="Physician">Primary Care Physician(PCP)
+                        <option value="Eye Doctor">Eye Doctor
+                            <option value="Cardiologist"> Cariologist
+                                <option value="Surgeon">Surgeon
+            </select>
+            <label for="specialty">City:</label>
+            <select formControlName="location_city" class="form-control">
+                <option value="Dallas">Dallas
+                    <option value="Tampa">Tampa
+                        <option value="San Diego">San Diego
+                            <option value="Franklin"> Franklin
+                                <option value="Houston">Houston
+            </select>
+            <label for="specialty">State:</label>
+            <select formControlName="location_state" class="form-control">
+                    <option value="Florida">Florida
+                        <option value="Texas">Texas
+                        <option value="California">California
+                            <option value="Tennesee"> Tennessee          
+            </select>
+            <label for="specialty">Insurance:</label>
+            <select formControlName="insuranceExcepted" class="form-control">
+                <option value="Health Care" selected>Health Care
+                    <option value="All care health">All Care Health
+                        <option value="All state">All State
+                            <option value="Progressive"> Progressive
+            </select>
+        </div>
+        <!-- <button class="btn btn-primary" type="submit" [disabled]="finddoctor.valid">Submit</button> -->
+        <button class="btn btn-success" [disabled]="finddoctor.invalid" type="submit">Submit</button>
+    </form>
+</div>
+    
+    
+
+    
+
+
+
+

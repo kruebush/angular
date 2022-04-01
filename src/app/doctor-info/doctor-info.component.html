@@ -1,0 +1,24 @@
+<p>Doctor Info!</p>
+<table border="10" cellspacing="10" cellpadding="10">
+    <tr>
+       
+       <th>Doctor Name</th>
+        <th>Specialty</th>
+        <th>city</th>
+        <th>State</th>
+        <th>Appointments Available</th>
+     
+    </tr>
+    <tr *ngFor="let doctor of doctors">
+       
+        <td>{{doctor.doctorName}}</td>
+        <td>{{doctor.specialty}}</td>
+        <td>{{doctor.location_city}}</td>
+        <td>{{doctor.location_state}}</td>
+       <!---<td>{{doctor.appointment}}</td>-->
+        
+       
+    </tr>
+
+
+</table>
